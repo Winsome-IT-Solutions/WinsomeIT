@@ -2096,31 +2096,34 @@ header .container{
 
 /* Logo */
 header .logo{
-	position:absolute;	
-	width:135px;
-	height:135px;
-	margin-right:10px;	
-	overflow:hidden;	
+	position: fixed;	
+	width:100px;
+	height:70px;
+	margin-right:5px;		
 }
 
 header .logo a{
 	width:100%;
 	height:100%;
 	display:inline-block;
-	background: rgb(241, 185, 31)  no-repeat center bottom;
+	border-radius: 70%;
+	background: rgb(255, 255, 255)  no-repeat center bottom;
+	box-shadow:
+        inset 0 0  rgb(248, 248, 244),       /* inner white */
+        inset 10px 0  rgb(248, 248, 244) ,   /* inner left magenta short */
+        inset  0  rgb(248, 248, 244) ,  /* inner right cyan short */
+        inset  0 1 rgb(248, 248, 244) ,  /* inner left magenta broad */
+        inset  0  rgb(248, 248, 244) , /* inner right cyan broad */
+       
+/* 		
+	-webkit-box-shadow: inset 0px 0px 10px 5px rgba(226, 220, 220, 0.1);
+	box-shadow: inset 0px 0px 10px 5px rgba(0, 0, 0, .1); */
+}
 
-	text-align: center;
-		
-	-webkit-box-shadow: inset 0px 0px 10px 5px rgba(0, 0, 0, .1);
-	box-shadow: inset 0px 0px 10px 5px rgba(0, 0, 0, .1);
-}
-header .logo a img{
-	margin-top: 24px;
-}
-header .logo a:hover{
+/* header .logo a:hover{
 	-webkit-box-shadow: inset 0px 0px 30px 15px rgba(0, 0, 0, .15);
 	box-shadow: inset 0px 0px 30px 15px rgba(0, 0, 0, .15);
-}
+} */
 header .row {
 	margin-bottom: 0;
 }
@@ -2131,7 +2134,7 @@ header .vc_primary-menu-wrapper{
    -moz-box-shadow:    inset 0 1px 0 #2A2A2A;
    -webkit-box-shadow: inset 0 1px 0 #2A2A2A;
    box-shadow:         inset 0 1px 0 #2A2A2A;
-   background-color: #1d2023;
+   background-color: #2f2c3d;
 }
 .vc_menu-bg {
 	width: 100%;
@@ -2176,9 +2179,6 @@ header .vc_primary-menu-wrapper{
 	color: #EEEEEE;
 	text-decoration: none;
 }
-.vc_menu .vc_primary-menu a:hover{
-/*	color: #FFFFFF; */
-}
 .vc_menu .vc_primary-menu li {
 	list-style: none;
 	float: left;
@@ -2189,7 +2189,7 @@ header .vc_primary-menu-wrapper{
 	border-right: 1px solid #2A2A2A;
 }
 .vc_menu .vc_primary-menu > ul > li > a {
-	border-right: 1px solid #000;
+	border-right: 1px solid rgb(197, 195, 195);
 	line-height: 73px;
 	padding: 0 22px;
 	float: left;
@@ -2484,7 +2484,7 @@ body.sticky-menu-active header .logo{
 	height: 86px;
 }
 body.sticky-menu-active header .logo img{
-	margin-top: 13px;
+	margin-top: 5px;
 }
 body.sticky-menu-active header .vc_secondary-menu, body.sticky-menu-active header .vc_sub-menu-bg{
 	display: none;
